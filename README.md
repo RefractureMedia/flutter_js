@@ -1,4 +1,4 @@
-# Flutter JS plugin
+## Moved development to [mercury-core](https://github.com/RefractureMedia/mercury-core)
 
 A Javascript engine to use with flutter. Now it is using QuickJS on Android   through Dart ffi and JavascriptCore on IOS also through dart-ffi. The Javascript runtimes runs synchronously through the dart ffi. So now you can run javascript code as a native citzen inside yours Flutter ~~Mobile~~ Apps (Android, IOS, Windows, Linux and MacOS are all supported).
 
