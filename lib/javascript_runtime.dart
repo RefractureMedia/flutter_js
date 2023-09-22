@@ -21,7 +21,7 @@ class FlutterJsPlatformEmpty extends JavascriptRuntime {
   void dispose() {}
 
   @override
-  JsEvalResult evaluate(String code, {String? sourceUrl}) {
+  Future<JsEvalResult> evaluate(String code, {String? sourceUrl}) {
     throw UnimplementedError();
   }
 
@@ -84,7 +84,7 @@ abstract class JavascriptRuntime {
   static Map<String, Map<String, Function(dynamic arg)>>
       get channelFunctionsRegistered => _channelFunctionsRegistered;
 
-  JsEvalResult evaluate(String code, {String? sourceUrl});
+  Future<JsEvalResult> evaluate(String code, {String? sourceUrl}); // yes
 
   Future<JsEvalResult> evaluateAsync(String code, {String? sourceUrl});
 
@@ -155,7 +155,7 @@ abstract class JavascriptRuntime {
       } on Exception catch (e) {
         print('Exception no setTimeout: $e');
       } on Error catch (e) {
-        print('Erro no setTimeout: $e');
+        print('Error no setTimeout: $e');
       }
     });
   }
